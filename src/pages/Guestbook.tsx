@@ -1,4 +1,4 @@
-// GuestbookPage.tsx (수정된 최종 코드)
+// GuestbookPage.tsx
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { 
@@ -175,7 +175,7 @@ export const GuestbookPage: React.FC = () => {
     }, [loadGuestbooks, currentPage]); 
 
     // --- 페이지 변경 핸들러 ---
-    const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
         if (value !== currentPage) {
              setCurrentPage(value);
              window.scrollTo({ top: 0, behavior: 'smooth' });

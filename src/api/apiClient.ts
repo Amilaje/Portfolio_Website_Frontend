@@ -6,7 +6,7 @@ import type { ProjectResponse, ProjectPageResponse, ProjectRequest } from '../ty
 import type { ChatResponse } from '../types/chatbot';
 
 // 백엔드 API 기본 경로 설정
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'http://packt-web-back-env.eba-uhvmngmc.us-east-2.elasticbeanstalk.com/api';
 
 // 1. Interceptor가 없는 순수 Axios 인스턴스 (로그인, 토큰 재발급에 사용)
 export const baseAxios: AxiosInstance = axios.create({

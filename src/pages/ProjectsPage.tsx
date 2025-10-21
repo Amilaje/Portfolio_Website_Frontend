@@ -223,7 +223,7 @@ export const ProjectsPage: React.FC = () => {
     }, [loadProjects, currentPage]);
 
     // --- 페이지 변경 핸들러 (변경 없음) ---
-    const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
+    const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
         if (value !== currentPage) {
              setCurrentPage(value);
              window.scrollTo({ top: 0, behavior: 'smooth' });

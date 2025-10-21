@@ -46,7 +46,6 @@ export const ProjectFormPage: React.FC = () => {
     
     // 폼 모드: ID가 있으면 '수정', 없으면 '생성'
     const isEditMode = !!id; 
-    const pageTitle = isEditMode ? '프로젝트 수정' : '새 프로젝트 등록';
     
     const [formData, setFormData] = useState<ProjectRequest>(initialFormData);
     const [loading, setLoading] = useState(isEditMode);
@@ -79,7 +78,7 @@ export const ProjectFormPage: React.FC = () => {
                         startDate: data.startDate.slice(0, 16),
                         endDate: data.endDate.slice(0, 16),
                     });
-                } catch (e) {
+                } catch (_e) {
                     setError('프로젝트 정보를 불러오는 데 실패했습니다.');
                 } finally {
                     setLoading(false);

@@ -89,9 +89,6 @@ const CurrentTimeAndWeather: React.FC = () => {
                 
                 {/* 1. 현재 시각 */}
                 <Grid 
-                    item // Grid item으로 변경
-                    xs={12} 
-                    sm={6}
                     sx={{ 
                         padding: theme.spacing(1) 
                     }}
@@ -123,16 +120,13 @@ const CurrentTimeAndWeather: React.FC = () => {
 
                 {/* 2. 현재 날씨 */}
                 <Grid 
-                    item // Grid item으로 변경
-                    xs={12} 
-                    sm={6} // 남은 공간을 사용하도록 sm={6}으로 설정
                     sx={{ 
                         padding: theme.spacing(1)
                     }}
                 >
                     <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: { xs: 'center', sm: 'flex-end' } }}>
                         
-                        {/* 🚨 [수정된 부분]: OpenWeatherMap 아이콘 이미지 사용 */}
+                        {/* OpenWeatherMap 아이콘 이미지 사용 */}
                         {weather.loading ? (
                              <Typography variant="body2">로딩 중...</Typography>
                         ) : weatherIconUrl ? (

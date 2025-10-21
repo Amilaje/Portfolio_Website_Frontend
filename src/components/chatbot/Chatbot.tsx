@@ -4,12 +4,9 @@ import {
     Modal,
     Box,
     TextField,
-    Button,
     List,
     ListItem,
-    ListItemText,
     CircularProgress,
-    Alert,
     Paper,
     Typography,
     Avatar,
@@ -154,7 +151,7 @@ export const Chatbot: React.FC = () => {
             };
             setMessages(prev => [...prev, newBotMessage]);
 
-        } catch (e) {
+        } catch (_e) {
             // API 통신 레벨의 최종 오류 처리 (fetchChatResponse에서 기본적으로 처리됨)
             const errorBotMessage: Message = {
                 id: Date.now() + 1,
@@ -333,8 +330,8 @@ export const Chatbot: React.FC = () => {
                             p: 2,
                             bgcolor: theme.palette.primary.main,
                             color: 'white',
-                            borderTopLeftRadius: theme.shape.borderRadius * 3,
-                            borderTopRightRadius: theme.shape.borderRadius * 3,
+                            borderTopLeftRadius: (theme.shape.borderRadius as number) * 3,
+                            borderTopRightRadius: (theme.shape.borderRadius as number) * 3,
                             display: 'flex',
                             justifyContent: 'space-between',
                             alignItems: 'center',

@@ -7,7 +7,6 @@ import { fetchPosts } from '../api/apiClient'; // API 호출
 import type { PostPageResponse } from '../types/post'; // Post 타입
  // Post 타입
 import {
-  Container,
   Typography,
   Table,
   TableBody,
@@ -23,7 +22,6 @@ import {
   InputAdornment,
   IconButton,
   CircularProgress,
-  Chip,
 } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -79,7 +77,7 @@ export const Board: React.FC = () => {
   // // -----------------------------
 
   // 페이지네이션 클릭 핸들러
-  const handlePageChange = (event: React.ChangeEvent<unknown>, value: number) => {
+  const handlePageChange = (_event: React.ChangeEvent<unknown>, value: number) => {
     setCurrentPage(value);
   };
 

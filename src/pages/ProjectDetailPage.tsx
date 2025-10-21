@@ -8,9 +8,7 @@ import {
     Paper, 
     Divider, 
     Chip, 
-    Button,
-    Link as MuiLink,
-    useTheme
+    Button
 } from '@mui/material';
 import { 
     AccessTime, 
@@ -52,7 +50,6 @@ export const ProjectDetailPage: React.FC = () => {
     const { userInfo } = useAuth();
     const isAdmin = userInfo?.role === 'ADMIN';
 
-    const theme = useTheme();
     const [project, setProject] = useState<ProjectResponse>(initialProjectDetail);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState<string | null>(null);

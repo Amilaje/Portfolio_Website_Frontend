@@ -27,7 +27,7 @@ import PeopleIcon from '@mui/icons-material/People';
 
 // 사용자 정의 컴포넌트 import (이전 단계에서 생성)
 // 이 파일 경로는 실제 프로젝트 구조에 맞게 유지 또는 수정해야 합니다.
-import CurrentTime from '../components/common/CurrentTime';
+import CurrentTimeAndWeather from '../components/common/CurrentTime';
 
 // --- 데이터 정의 (포트폴리오 내용 기반) ---
 
@@ -324,7 +324,7 @@ const Home: React.FC = () => {
                     </Typography>
                     
                     {/* 시계/날씨 컴포넌트 */}
-                    <CurrentTime defaultLocation="대전" sx={{ mb: 2 }} /> 
+                    <CurrentTimeAndWeather />
 
                     {/* 인증 시스템 신뢰도 문구 */}
                     <Typography variant="caption" color="text.disabled" sx={{ mt: 1 }}>
